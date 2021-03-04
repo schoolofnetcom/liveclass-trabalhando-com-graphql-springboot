@@ -1,0 +1,26 @@
+query {
+  sayHello
+}
+
+query {
+  findBooks {
+    title,
+    isbn
+  }
+}
+
+
+
+
+mutation createBook($input: BookInput!) {
+  createBook(book: $input) {
+    title,
+    isbn
+  }
+}
+
+{
+  "input": {
+    "title": "Book 1"
+  }
+}
